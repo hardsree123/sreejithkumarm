@@ -46,11 +46,11 @@ Array(200).fill().forEach(addStar);
 
 
 //add texture and space
-const spaceTexture = new THREE.TextureLoader().load('/images/background.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./background.jpg');
 scene.background = spaceTexture;
 
 //avatar
-const sreejithTexture = new THREE.TextureLoader().load('/images/sreejith.jpg');
+const sreejithTexture = new THREE.TextureLoader().load('./sreejith.jpg');
 const sreejith = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
   new THREE.MeshBasicMaterial({
@@ -60,7 +60,7 @@ const sreejith = new THREE.Mesh(
 scene.add(sreejith);
 
 //Moon 
-const moonTexture = new THREE.TextureLoader().load('/images/flat-moon_cropped.png');
+const moonTexture = new THREE.TextureLoader().load('./flat-moon_cropped.png');
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3,32,32),
   new THREE.MeshStandardMaterial({
