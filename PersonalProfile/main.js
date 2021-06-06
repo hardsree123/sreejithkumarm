@@ -1,5 +1,7 @@
-import './style.css'
-
+import './style.css';
+import moonUrl from './full-moon.png';
+import sreejithUrl from './sreejith.jpg';
+import bgUrl from './background.jpg';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 
@@ -46,11 +48,11 @@ Array(200).fill().forEach(addStar);
 
 
 //add texture and space
-const spaceTexture = new THREE.TextureLoader().load('./background.jpg');
+const spaceTexture = new THREE.TextureLoader().load(bgUrl);
 scene.background = spaceTexture;
 
 //avatar
-const sreejithTexture = new THREE.TextureLoader().load('./sreejith.jpg');
+const sreejithTexture = new THREE.TextureLoader().load(sreejithUrl);
 const sreejith = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
   new THREE.MeshBasicMaterial({
@@ -60,7 +62,7 @@ const sreejith = new THREE.Mesh(
 scene.add(sreejith);
 
 //Moon 
-const moonTexture = new THREE.TextureLoader().load('./flat-moon_cropped.png');
+const moonTexture = new THREE.TextureLoader().load(moonUrl);
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3,32,32),
   new THREE.MeshStandardMaterial({
